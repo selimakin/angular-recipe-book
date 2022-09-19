@@ -11,7 +11,11 @@ import * as ShoppingListActions from '../shopping-list/store/shopping-list.actio
   styleUrls: ['./shopping-list.component.css'],
 })
 export class ShoppingListComponent implements OnInit {
-  ingredients: Observable<{ ingredients: Ingredient[] }>;
+  ingredients: Observable<{
+    ingredients: Ingredient[];
+    editedIngredient: Ingredient;
+    editedIngredientIndex: number;
+  }>;
 
   constructor(private store: Store<fromApp.AppState>) {}
 
